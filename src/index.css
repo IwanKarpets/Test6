@@ -1,13 +1,159 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  background: #fff;
+}
+
+header{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  z-index: 100;
+  background: blue;
+}
+
+header .logo img{
+  max-width: 150px;
+}
+
+.navigation{
+  display: flex;
+}
+
+.navigation li{
+  list-style: none;
+  margin: 0 10px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.navigation li a{
+  color: #fff;
+}
+
+.navigation li:hover a{
+  color: #de0611;
+}
+
+.container{
+  width: 80%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+.customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.customers tr:nth-child(even){background-color: #f2f2f2;}
+
+.customers tr:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: blue;
+  color: white;
+}
+
+.delete{
+  display: block;
+  width: 80%;
+  height: 30px;
+  margin: 0 auto;
+}
+
+.delete:hover{
+  cursor: pointer;
+}
+.fetching{
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  margin: 30vh auto;
+  border: 2px dashed red;
+  animation-name:search-fetching;
+  animation-duration: 1s;
+  animation-direction:alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes search-fetching{
+  0%{
+      transform: rotate(0deg);
+  }
+
+  100%{
+      transform: rotate(360deg) scale(1.5);
+  }
+}@keyframes search-fetching{
+  0%{
+      transform: rotate(0deg);
+  }
+
+  100%{
+      transform: rotate(360deg) scale(1.5);
+  }
+}
+
+.employees{
+  width: 100%; 
+  height: 500px;
+}
+
+.employees h1{
+  width:150px;
+  margin: 0 auto;
+}
+
+.addEmployeeForm{
+  width: 600px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 2px solid;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+}
+.addEmployeeForm input{
+  width: 100%;
+  outline: none;
+  margin-bottom: 5px;
+  padding: 5px 5px;
+}
+
+.addEmployeeForm .add{
+  padding: 2px;
+}
+
+.addEmployeeForm .add:hover{
+  cursor: pointer;
+}
+
+.open{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
